@@ -1,3 +1,4 @@
+import { Link, Outlet } from "react-router-dom";
 import octopusImg from "../assets/gaintOctopus.webp";
 import "./BlogPage.css";
 
@@ -28,11 +29,15 @@ function BlogPage() {
               />
             </div>
             <div className="m-2">
-              <h3 className="font-semibold">Work In Progress</h3>
-              <p className="text-gray-600">
-                Learn more about June’s product releases and their early impact
-                on lead flow to designers.
-              </p>
+              <Link to="blog1">
+                <h3 className="font-semibold">Work In Progress</h3>
+
+                <p className="text-gray-600 line-clamp-2 lg:line-clamp-3">
+                  Learn more about June’s product releases and their early
+                  impact on lead flow to designers.
+                </p>
+              </Link>
+              <Outlet />
             </div>
           </div>
 
@@ -48,7 +53,7 @@ function BlogPage() {
               <h3 className="font-semibold">
                 Celebrating Pride Month Through Design
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 line-clamp-2 lg:line-clamp-3">
                 Dribbble is proud to celebrate the LGBTQIA+ community through
                 design. We’ve curated a selection of impactful Pride-themed
                 artwork from our talented designers, each sharing their
@@ -71,7 +76,7 @@ function BlogPage() {
                 Unlock opportunity and showcase your skills with a Webflow
                 Expert badge
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 line-clamp-2 lg:line-clamp-3">
                 If you’re a designer who has mastered Webflow and wants to show
                 off your skills, you can earn an Expert badge for your Dribbble
                 profile and appear on our exclusive Webflow Expert landing page.
@@ -92,7 +97,7 @@ function BlogPage() {
                 Balkan Bros: Building a Legacy of Trust from Progressive
                 Insurance to AWS
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 line-clamp-2 lg:line-clamp-3">
                 BB Agency’s success story is built on the power of long-term
                 relationships and creative innovation. When a design project for
                 Progressive Insurance led to a new product design for AWS, BB
@@ -116,7 +121,7 @@ function BlogPage() {
               <h3 className="font-semibold">
                 How to Make Emails That Survive the Delete Button
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 line-clamp-2 lg:line-clamp-3">
                 What worked back in the day–or even a few years ago (cough,
                 cough: emojis in email subject lines; random personalization
                 that feels specific but isn’t), no longer captures attention. In

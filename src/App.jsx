@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import AboutUs from "./components/AboutUs";
 import BlogPage from "./components/BlogPage";
+import Sublayouts from "./components/Sublayouts";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/blogpage" element={<BlogPage />} />
+        <Route path="blogpage" element={<BlogPage />}>
+          <Route path="blog1" element={<Sublayouts />} />
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>
