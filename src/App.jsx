@@ -8,6 +8,8 @@ import BlogPage from "./components/BlogPage";
 import Sublayouts from "./components/Sublayouts";
 import { useState } from "react";
 import BlogLayout from "./components/BlogLayout";
+import BlogDetail from "./components/BlogDetail";
+
 function App() {
   const [blogs, setblogs] = useState([
     {
@@ -51,12 +53,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="blogpage" element={<BlogLayout />}>
-          <Route
-            path=""
-            element={<BlogPage blogs={blogs} addBlog={addBlog} />}
-          />
-          <Route path="blog" element={<Sublayouts />} />
+        <Route
+          path="blogpage"
+          element={<BlogLayout blogs={blogs} addBlog={addBlog} />}
+        >
+          <Route index element={<BlogPage />} />
+          <Route path="blog/:id" element={<BlogDetail />} />
         </Route>
       </Routes>
       <Footer />
